@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
-<script type="text/javascript">
-  $(function() {
-    $('.map').maphilight({ alwaysOn: true, fillColor: "00ff00" });
-  });
-</script>
-
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('.map').maphilight({ alwaysOn: true, fillColor: "00ff00" });
+    });
+  </script>
+</head>
 <body>
-    <h1>ModernSpaaces Pricing Map Trial</h1>
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-warning" href="#">Modern Spaaces Pricing Example</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Pricing</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
     <p>When you click on a Apartment parts shows the Price Here.</p>
 
     <h2 id="demo"><strong>Price Here Changes.</strong></h2>
+
   <div>
     <div class="imginfo"><span></span></div>
 
@@ -33,6 +55,34 @@
     data-maphilight='{"alwaysOn":true,"stroke":true,"strokeWidth":"3","fillColor":"00ff00","fillOpacity":"0.3"}'
     <area alt="Modern Spaaces" title="Modern Spaaces" onclick="change_textone()" coords="917,508,170" shape="circle" data-maphilight='{"alwaysOn":true,"stroke":true,"strokeWidth":"3","fillColor":"0000ff","fillOpacity":"0.3"}'> -->
 </map>
+
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">2 BHK</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Trying Image -->
+          <img src="./img1.jpeg" alt="Image" class="img-fluid">
+          <div class="card">
+            <div class="card-body">
+              Built Up Area: 1800 SQ Ft.
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Usable Area</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   </div>
   <script type="text/javascript">
     function change_text(){
@@ -47,9 +97,12 @@
   <script type="text/javascript">
     function change_texttwo(){
         document.getElementById("demo").innerHTML = "Starts from INR 86,64,000.00/- . Get Detailes Price  <a href=\"https://modernspaaces.in/\">Here</a> ";
+        $('#exampleModal').modal('show');
     }
   </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+  </div>
 </body>
 
 </html>
