@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.map').maphilight({ alwaysOn: true, fillColor: "00ff00" });
+  });
+</script>
+
+<body>
+    <h1>ModernSpaaces Pricing Map Trial</h1>
+    <p>When you click on a Apartment parts shows the Price Here.</p>
+
+    <h2 id="demo"><strong>Price Here Changes.</strong></h2>
+  <div>
+    <div class="imginfo"><span></span></div>
+
+    <img src="./sample.jpg" usemap="#image-map" class="map">
+
+    <map name="image-map">
+    <area alt="Google" title="Google" onclick="change_texttwo()" coords="69,474,81,699,417,695,417,662,434,660,441,609,436,507,418,503,419,411,392,381,344,333,288,338,174,450,157,460,119,432" shape="poly" data-maphilight='{"alwaysOn":true,"stroke":true,"strokeWidth":"3","fillColor":"ff0000","fillOpacity":"0.3"}'>
+    <area alt="Modern Spaaces" title="Modern Space's" onclick="change_text()"  coords="638,647,445,361" shape="rect" >
+    <!-- data-maphilight='{"alwaysOn":true,"stroke":true,"strokeWidth":"3","fillColor":"00ff00","fillOpacity":"0.3"}' -->
+    <area alt="Modern Spaaces" title="Modern Spaaces" onclick="change_textone()" coords="917,508,170" shape="circle" data-maphilight='{"alwaysOn":true,"stroke":true,"strokeWidth":"3","fillColor":"0000ff","fillOpacity":"0.3"}'>
+</map>
+  </div>
+  <script type="text/javascript">
+    function change_text(){
+        document.getElementById("demo").innerHTML = "1.1 Crore Onwards.";
+    }
+  </script>
+  <script type="text/javascript">
+    function change_textone(){
+        document.getElementById("demo").innerHTML = "75 lakhs Only.";
+    }
+  </script>
+  <script type="text/javascript">
+    function change_texttwo(){
+        document.getElementById("demo").innerHTML = "Starts from INR 86,64,000.00/- . Get Detailes Price  <a href=\"https://modernspaaces.in/\">Here</a> ";
+    }
+  </script>
+
+</body>
+
+</html>
